@@ -1,3 +1,5 @@
+import coinToNumber from "./coinToNumber";
+
 declare global {
   type TransacaoPagamento = 'Boleto' | 'Cartão de Crédito'
   type TransacaoStatus =
@@ -45,7 +47,7 @@ export default function normalizeTransacao(transacao: TransacaoAPI) {
     email: transacao.Email,
     moeda: transacao["Valor (R$)"],
 
-    valor: 0,
+    valor: coinToNumber(transacao["Valor (R$)"]),
     pagamento: transacao["Forma de Pagamento"],
     novo: Boolean(transacao["Cliente Novo"]),
   }

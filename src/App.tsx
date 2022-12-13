@@ -6,9 +6,24 @@ function App() {
   window.addEventListener("load", handleBody)
 
   return (
-    <div>
-      Hello
-    </div>
+    <>
+      <h1>Data</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Compra</th>
+            <th>Pagamento</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+    </>
+
   )
 }
 

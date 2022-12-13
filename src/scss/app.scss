@@ -2,6 +2,12 @@
   padding:0;
   border:0;
   margin:0;
-  font-family:calibri;
+  border-spacing:0;
   box-sizing:border-box;
+}
+
+table {
+  tr:nth-child(even) {
+    background:ghostwhite;
+  }
 }

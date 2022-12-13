@@ -8,6 +8,9 @@ async function handleData() {
   const transacoes = data.map(normalizeTransacao)
 
   console.log(transacoes)
+  transacoes.forEach(item => {
+    item.data
+  })
 }
 
 export function handleBody() {

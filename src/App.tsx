@@ -8,7 +8,10 @@ function App() {
   return (
     <>
       <h1>Estatísticas: </h1>
-      <span>Total:</span>
+      <span>Total: </span>
+
+      <article id='pagamento'></article>
+      <article id='status'></article>
 
       <h2>Data</h2>
 

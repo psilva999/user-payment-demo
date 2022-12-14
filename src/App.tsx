@@ -12,6 +12,7 @@ function App() {
 
       <article id='pagamento'></article>
       <article id='status'></article>
+      <article id='melhorDia'>Melhor dia: </article>
 
       <h2>Data</h2>
 

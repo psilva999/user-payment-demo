@@ -26,7 +26,9 @@ function fillList(list: CountList, containerId: string): void {
 
 function fillStatistics(transacoes: Transacao[]): void {
   const data = new Stats(transacoes),
-        span = document.querySelector<HTMLElement>("span")
+        span = document.querySelector<HTMLElement>("span"),
+        dia = document.querySelector<HTMLElement>
+        ('#melhorDia')
 
   if (span) {
     span.innerText += data.value.toLocaleString('pt-BR', { 
@@ -37,6 +39,10 @@ function fillStatistics(transacoes: Transacao[]): void {
 
   fillList(data.pagamento, 'pagamento')
   fillList(data.status, 'status')
+
+  if (dia) {
+    dia.innerText += data.melhorDia[0]
+  }
 }
 
 function fillTable(transcacoes: Transacao[]): void {

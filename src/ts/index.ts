@@ -1,5 +1,6 @@
 import fetchData from "./fetchData"
 import normalizeTransacao from "./normalizeTransacao"
+import Stats from "./Stats"
 
 async function handleData() {
   const data = await fetchData<TransacaoAPI[]>('https://api.origamid.dev/json/transacoes.json?')
@@ -8,6 +9,19 @@ async function handleData() {
   const transacoes = data.map(normalizeTransacao)
 
   fillTable(transacoes)
+  fillStatistics(transacoes)
+}
+
+function fillStatistics(transacoes: Transacao[]): void {
+  const data = new Stats(transacoes),
+        span = document.querySelector<HTMLElement>("span") 
+
+  if (span) {
+    span.innerText += data.value.toLocaleString('pt-BR', { 
+      style: 'currency',
+      currency: 'BRL'
+    })
+  }
 }
 
 function fillTable(transcacoes: Transacao[]): void {

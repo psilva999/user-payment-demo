@@ -7,7 +7,10 @@ function App() {
 
   return (
     <>
-      <h1>Data</h1>
+      <h1>Estatísticas: </h1>
+      <span>Total:</span>
+
+      <h2>Data</h2>
 
       <table>
         <thead>

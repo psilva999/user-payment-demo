@@ -41,7 +41,7 @@ function fillStatistics(transacoes: Transacao[]): void {
   fillList(data.status, 'status')
 
   if (dia) {
-    dia.innerText += data.melhorDia[0]
+    dia.innerText += ` ${ data.melhorDia[0] }`
   }
 }
 

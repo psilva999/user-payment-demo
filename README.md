@@ -1,2 +1,2 @@
 # user-payment
- Made with TS, SCSS and React
+ Made with TS and React
